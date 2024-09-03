@@ -1,16 +1,29 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation'; // Ana sayfaya yönlendirmek için
 
 export default function InfoPage() {
   const [isRegistering, setIsRegistering] = useState(false);
+  const router = useRouter(); // Yönlendirme işlemi için
 
   const toggleForm = () => {
     setIsRegistering(!isRegistering);
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen p-4">
+      {/* Geri butonu - sadece mobilde gösterilecek */}
+      <div className="w-full max-w-sm mb-4">
+        <button
+          className="sm:hidden flex items-center text-gray-300 text-lg mb-4"
+          onClick={() => router.push('/')}
+        >
+          <i className="fa-solid fa-chevron-left mr-2"></i> {/* Geri butonu ikonu */}
+          Geri
+        </button>
+      </div>
+
       <div className="bg-gray-900 p-8 rounded shadow-md w-full max-w-sm">
         {isRegistering ? (
           <>

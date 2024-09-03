@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-export default function PCBHataAyiklama() {
+export default function DirencDeger() {
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const router = useRouter();
 
@@ -34,9 +34,9 @@ export default function PCBHataAyiklama() {
         </button>
       </div>
 
-      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">PCB Hata Ayıklama</h1> {/* Başlık responsive */}
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">Direnç Değer Hesaplama</h1> {/* Başlık responsive */}
       <p className="text-base sm:text-lg mb-8 text-center">
-        Fotoğrafını yüklediğiniz PCB'nin hangi hatalara sahip olduğunu açıklar.
+        Fotoğrafını yüklediğiniz direncin hangi değeri ifade ettiğini açıklar.
       </p>
       <div
         className="flex flex-col items-center rounded-3xl p-10 sm:p-20 border-2 sm:border-4 border-dashed border-gray-600 w-full max-w-3xl cursor-pointer"
